@@ -1,0 +1,15 @@
+---
+title: 'Proceso Cientista: Modelagem'
+output:
+  github_document:
+    toc: true
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r loadlibs, results='hide', message=F, warning=F}
+library(tidyverse)
+library(caret)
+```

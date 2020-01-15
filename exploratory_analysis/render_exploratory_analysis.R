@@ -1,2 +1,2 @@
 library(rmarkdown)
-render('exploratory_analysis.Rmd')
+render('exploratory_analysis/exploratory_analysis.Rmd')

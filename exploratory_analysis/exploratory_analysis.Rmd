@@ -1,7 +1,7 @@
 ---
 title: "Processo Cientista: Análise Exploratória"
 output:
-  html_document:
+  github_document:
     toc: true
 bibliography: bibliography.bib
 ---
@@ -84,7 +84,7 @@ summary(rain_data_aus$modelo_vigente)
 boxplot(rain_data_aus$modelo_vigente~rain_data_aus$raintomorrow)
 ```
 
-Uma breve análise desta variável sugere que se trata das predições dadas por um modelo adotado atualmente para a mesma tarefa. Isso sugere um objetivo para este projeto: **obter um modelo melhor que o modelo vigente**. Para isso, vamos avaliar o modelo vigente e compará-lo ao modelo que vamos construir.
+Uma breve análise desta variável sugere que se trata das predições dadas por um modelo adotado atualmente para a mesma tarefa. A fim de evitar que nosso modelo seja viesado, não vamos usar essa variável
 
 Vamos continuar analisando as bases carregadas:
 
@@ -126,7 +126,7 @@ A partir de agora, vamos utilizar alguns pacotes que facilitam a automatização
 
 ## Diagnóstico da base
 
-O relatório pode ser visualizado no arquivo [reports/dlookr_diagnose.html](/processo_cientista/exploratory_analysis/reports/dlookr_diagnose.html).
+O relatório pode ser visualizado no arquivo [reports/dlookr_diagnose.html](http://htmlpreview.github.io/?https://github.com/guilhermejordan/processo_cientista/blob/master/exploratory_analysis/reports/dlookr_diagnose.html).
 
 ### Destaques:
 
@@ -137,13 +137,19 @@ O relatório pode ser visualizado no arquivo [reports/dlookr_diagnose.html](/pro
 
 ## Análise exploratória
 
-O relatório pode ser visualizado no arquivo ![reports/dlookr_eda.html](./reports/dlookr_eda.html). O principal destaque é que a distribuição da maior parte das variáveis numéricas é razoavelmente próxima da Normal, apesar dos outliers. Isso pode colaborar na fase de modelagem. Temos também diversas variáveis com forte correlação, o que pode ajudar reduzir o número de variáveis utilizadas pelo modelo.
+O relatório pode ser visualizado no arquivo [reports/dlookr_eda.html](http://htmlpreview.github.io/?https://github.com/guilhermejordan/processo_cientista/blob/master/exploratory_analysis/reports/dlookr_eda.html). O principal destaque é que a distribuição da maior parte das variáveis numéricas é razoavelmente próxima da Normal, apesar dos outliers. Isso pode colaborar na fase de modelagem. Temos também diversas variáveis com forte correlação, o que pode ajudar reduzir o número de variáveis utilizadas pelo modelo.
 
 ## DataExplorer
 
-O relatório pode ser visualizado no arquivo [reports/dataexplorer.html](./reports/dataexplorer.html). Destaque para a seção boxplots (by raintomorrow) que já sugere que algumas variáveis são úteis para a classificação.
+O relatório do DataExplorer pode ser visualizado no arquivo [reports/dataexplorer.html](http://htmlpreview.github.io/?https://github.com/guilhermejordan/processo_cientista/blob/master/exploratory_analysis/reports/dataexplorer.html). Destaque para a seção boxplots (by raintomorrow) que já sugere que algumas variáveis são úteis para a classificação.
 
+## Conclusão
 
+A análise exploratória sugere que, apesar das bases serem razoavelmente limpas, ainda serão necessários alguns preprocessamentos na fase de modelagem, dentre eles:
+
+- imputação de valores missing
+- tratmento de outliers
+- mudança de escala de variáveis
 
 
 
