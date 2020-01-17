@@ -1,12 +1,14 @@
 library(dplyr)
 library(recipes)
 library(caret)
+library(doParallel)
+library(e1071)
 
 source('r_functions/load_rain_dataset.R')
 rain <- load_rain_dataset()
 
 set.seed(42)
-inTrain <- createDataPartition(rain$raintomorrow, p=0.7, list=FALSE)
+inTrain <- createDataPartition(rain$raintomorrow, p=0.75, list=FALSE)
 training <- rain[inTrain,]
 testing <- rain[-inTrain,]
 
@@ -21,7 +23,7 @@ rain_recipe <-
     pressurechange = pressure3pm - pressure9am
   ) %>%
   step_rm(cloud9am, cloud3pm, sunshine, evaporation,
-          amountOfRain, date) %>%
+          amountOfRain, date, location) %>%
   step_corr(all_numeric()) %>%
   step_nzv(-all_outcomes()) %>%
   step_medianimpute(all_numeric()) %>%
@@ -40,11 +42,16 @@ train_control <- trainControl(
 
 # https://csantill.github.io/RTuningModelParameters/
 
+cl <- makePSOCKcluster(6)
+registerDoParallel(cl)
+
 set.seed(42)
-rpart1 <- train(raintomorrow ~ .,
+rpart <- train(raintomorrow ~ .,
                 data = training_baked,
                 method = "rpart",
                 na.action = na.pass,
                 trControl = train_control)
+stopCluster(cl)
 
-saveRDS(rpart1, "modelling/rpart1.RDS")
+# saveRDS(rpart, "modelling/rpart.RDS")
+
