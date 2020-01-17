@@ -3,4 +3,4 @@
 # install.packages('checkpoint')
 # e execute este script
 library(checkpoint)
-checkpoint('2020-01-14')
+checkpoint('2020-01-14', use.knitr = TRUE, auto.install.knitr = TRUE)

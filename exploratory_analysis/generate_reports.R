@@ -12,7 +12,7 @@ rain <- load_rain_dataset()
 
 rain %>%
   diagnose_report(output_format = 'html',
-                  output_dir = 'exploratory_analysis/reports',
+                  output_dir = paste0(getwd(), '/exploratory_analysis/reports'),
                   output_file = 'dlookr_diagnose.html',
                   browse = FALSE)
 
@@ -20,7 +20,7 @@ rain %>%
 
 rain %>%
   eda_report(output_format = 'html',
-             output_dir = 'exploratory_analysis/reports',
+             output_dir = paste0(getwd(),'/exploratory_analysis/reports'),
              output_file = 'dlookr_eda.html',
              browse = FALSE)
 
@@ -28,6 +28,6 @@ rain %>%
 
 rain %>%
   create_report(y = 'raintomorrow',
-                output_dir = 'exploratory_analysis/reports',
+                output_dir = paste0(getwd(),'/exploratory_analysis/reports'),
                 output_file = 'dataexplorer.html')
 

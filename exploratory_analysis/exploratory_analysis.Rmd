@@ -122,7 +122,7 @@ rain <- rain_data_aus %>%
 head(rain)
 ```
 
-A partir de agora, vamos utilizar alguns pacotes que facilitam a automatização da análise exploratória [@staniak2019landscape]. Vamos focar em pacotes que geram relatórios automaticamente. O script que gera esses relatórios é o `exploratory_analysis/generate_reports.R`.
+A partir de agora, vamos utilizar alguns pacotes que facilitam a automatização da análise exploratória, conforme estratégia descrita por [@staniak2019landscape]. Vamos focar em pacotes que geram relatórios automaticamente. O script que gera esses relatórios é o `exploratory_analysis/generate_reports.R`.
 
 ## Diagnóstico da base
 
@@ -130,8 +130,7 @@ O relatório pode ser visualizado no arquivo [reports/dlookr_diagnose.html](http
 
 ### Destaques:
 
-1. As variáveis `evaporation` e `sunshine` têm mais de 98 % de observações missing, sendo de pouca utilidade para a modelagem.
-2. As variáveis `cloud9am` e `cloud3pm` também tem muitas observações missing (> 37 %), requerendo atenção na fase de modelagem.
+1. As variáveis `evaporation`, `sunshine`, `cloud9am` e `cloud3pm` tem muitos missings, requerendo atenção na fase de modelagem.
 3. A maioria das variáveis numéricas apresenta potenciais outliers, requerendo atenção na fase de modelagem.
 4. Curiosamente, todos os valores da variável `precipitation9am` são únicos.
 
@@ -141,9 +140,9 @@ O relatório pode ser visualizado no arquivo [reports/dlookr_eda.html](http://ht
 
 ## DataExplorer
 
-O relatório do DataExplorer pode ser visualizado no arquivo [reports/dataexplorer.html](http://htmlpreview.github.io/?https://github.com/guilhermejordan/processo_cientista/blob/master/exploratory_analysis/reports/dataexplorer.html). Destaque para a seção boxplots (by raintomorrow) que já sugere que algumas variáveis são úteis para a classificação.
+O relatório do DataExplorer pode ser visualizado no arquivo [reports/dataexplorer.html](http://htmlpreview.github.io/?https://github.com/guilhermejordan/processo_cientista/blob/master/exploratory_analysis/reports/dataexplorer.html). Destaque para a seção [Bivariate Distribution](http://htmlpreview.github.io/?https://github.com/guilhermejordan/processo_cientista/blob/master/exploratory_analysis/reports/dataexplorer.html#bivariate-distribution) que já sugere que algumas variáveis são úteis para a classificação, inclusive aquelas com muitos missings como `sunshine`, `cloud9am` e `cloud3pm`.
 
-Além disso, identficamos um problema: a variável `amountOfRain` de fato corresponde à quantidade de chuva amanhã. Desta forma, se usássemos esta variável no treino, estaríamos "trapaceando". Mais detalhes [aqui](https://www.kaggle.com/jsphyg/weather-dataset-rattle-package/discussion/78316).
+Além disso, identficamos um problema: a variável `amountOfRain` de fato corresponde à quantidade de chuva amanhã. Desta forma, se usássemos esta variável no treino, estaríamos "trapaceando". Mais detalhes podem ser lidos na discussão do dataset original [aqui](https://www.kaggle.com/jsphyg/weather-dataset-rattle-package/discussion/78316).
 
 ## Conclusão
 

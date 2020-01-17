@@ -1,0 +1,890 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+
+<meta charset="utf-8">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="pandoc" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<style type="text/css">
+@font-face {
+font-family: octicons-link;
+src: url(data:font/woff;charset=utf-8;base64,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) format('woff');
+}
+body {
+-webkit-text-size-adjust: 100%;
+text-size-adjust: 100%;
+color: #333;
+font-family: "Helvetica Neue", Helvetica, "Segoe UI", Arial, freesans, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+font-size: 16px;
+line-height: 1.6;
+word-wrap: break-word;
+}
+a {
+background-color: transparent;
+}
+a:active,
+a:hover {
+outline: 0;
+}
+strong {
+font-weight: bold;
+}
+h1 {
+font-size: 2em;
+margin: 0.67em 0;
+}
+img {
+border: 0;
+}
+hr {
+box-sizing: content-box;
+height: 0;
+}
+pre {
+overflow: auto;
+}
+code,
+kbd,
+pre {
+font-family: monospace, monospace;
+font-size: 1em;
+}
+input {
+color: inherit;
+font: inherit;
+margin: 0;
+}
+html input[disabled] {
+cursor: default;
+}
+input {
+line-height: normal;
+}
+input[type="checkbox"] {
+box-sizing: border-box;
+padding: 0;
+}
+table {
+border-collapse: collapse;
+border-spacing: 0;
+}
+td,
+th {
+padding: 0;
+}
+* {
+box-sizing: border-box;
+}
+input {
+font: 13px / 1.4 Helvetica, arial, nimbussansl, liberationsans, freesans, clean, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+a {
+color: #4078c0;
+text-decoration: none;
+}
+a:hover,
+a:active {
+text-decoration: underline;
+}
+hr {
+height: 0;
+margin: 15px 0;
+overflow: hidden;
+background: transparent;
+border: 0;
+border-bottom: 1px solid #ddd;
+}
+hr:before {
+display: table;
+content: "";
+}
+hr:after {
+display: table;
+clear: both;
+content: "";
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+margin-top: 15px;
+margin-bottom: 15px;
+line-height: 1.1;
+}
+h1 {
+font-size: 30px;
+}
+h2 {
+font-size: 21px;
+}
+h3 {
+font-size: 16px;
+}
+h4 {
+font-size: 14px;
+}
+h5 {
+font-size: 12px;
+}
+h6 {
+font-size: 11px;
+}
+blockquote {
+margin: 0;
+}
+ul,
+ol {
+padding: 0;
+margin-top: 0;
+margin-bottom: 0;
+}
+ol ol,
+ul ol {
+list-style-type: lower-roman;
+}
+ul ul ol,
+ul ol ol,
+ol ul ol,
+ol ol ol {
+list-style-type: lower-alpha;
+}
+dd {
+margin-left: 0;
+}
+code {
+font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
+font-size: 12px;
+}
+pre {
+margin-top: 0;
+margin-bottom: 0;
+font: 12px Consolas, "Liberation Mono", Menlo, Courier, monospace;
+}
+.select::-ms-expand {
+opacity: 0;
+}
+.octicon {
+font: normal normal normal 16px/1 octicons-link;
+display: inline-block;
+text-decoration: none;
+text-rendering: auto;
+-webkit-font-smoothing: antialiased;
+-moz-osx-font-smoothing: grayscale;
+-webkit-user-select: none;
+-moz-user-select: none;
+-ms-user-select: none;
+user-select: none;
+}
+.octicon-link:before {
+content: '\f05c';
+}
+.markdown-body:before {
+display: table;
+content: "";
+}
+.markdown-body:after {
+display: table;
+clear: both;
+content: "";
+}
+.markdown-body>*:first-child {
+margin-top: 0 !important;
+}
+.markdown-body>*:last-child {
+margin-bottom: 0 !important;
+}
+a:not([href]) {
+color: inherit;
+text-decoration: none;
+}
+.anchor {
+display: inline-block;
+padding-right: 2px;
+margin-left: -18px;
+}
+.anchor:focus {
+outline: none;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+margin-top: 1em;
+margin-bottom: 16px;
+font-weight: bold;
+line-height: 1.4;
+}
+h1 .octicon-link,
+h2 .octicon-link,
+h3 .octicon-link,
+h4 .octicon-link,
+h5 .octicon-link,
+h6 .octicon-link {
+color: #000;
+vertical-align: middle;
+visibility: hidden;
+}
+h1:hover .anchor,
+h2:hover .anchor,
+h3:hover .anchor,
+h4:hover .anchor,
+h5:hover .anchor,
+h6:hover .anchor {
+text-decoration: none;
+}
+h1:hover .anchor .octicon-link,
+h2:hover .anchor .octicon-link,
+h3:hover .anchor .octicon-link,
+h4:hover .anchor .octicon-link,
+h5:hover .anchor .octicon-link,
+h6:hover .anchor .octicon-link {
+visibility: visible;
+}
+h1 {
+padding-bottom: 0.3em;
+font-size: 2.25em;
+line-height: 1.2;
+border-bottom: 1px solid #eee;
+}
+h1 .anchor {
+line-height: 1;
+}
+h2 {
+padding-bottom: 0.3em;
+font-size: 1.75em;
+line-height: 1.225;
+border-bottom: 1px solid #eee;
+}
+h2 .anchor {
+line-height: 1;
+}
+h3 {
+font-size: 1.5em;
+line-height: 1.43;
+}
+h3 .anchor {
+line-height: 1.2;
+}
+h4 {
+font-size: 1.25em;
+}
+h4 .anchor {
+line-height: 1.2;
+}
+h5 {
+font-size: 1em;
+}
+h5 .anchor {
+line-height: 1.1;
+}
+h6 {
+font-size: 1em;
+color: #777;
+}
+h6 .anchor {
+line-height: 1.1;
+}
+p,
+blockquote,
+ul,
+ol,
+dl,
+table,
+pre {
+margin-top: 0;
+margin-bottom: 16px;
+}
+hr {
+height: 4px;
+padding: 0;
+margin: 16px 0;
+background-color: #e7e7e7;
+border: 0 none;
+}
+ul,
+ol {
+padding-left: 2em;
+}
+ul ul,
+ul ol,
+ol ol,
+ol ul {
+margin-top: 0;
+margin-bottom: 0;
+}
+li>p {
+margin-top: 16px;
+}
+dl {
+padding: 0;
+}
+dl dt {
+padding: 0;
+margin-top: 16px;
+font-size: 1em;
+font-style: italic;
+font-weight: bold;
+}
+dl dd {
+padding: 0 16px;
+margin-bottom: 16px;
+}
+blockquote {
+padding: 0 15px;
+color: #777;
+border-left: 4px solid #ddd;
+}
+blockquote>:first-child {
+margin-top: 0;
+}
+blockquote>:last-child {
+margin-bottom: 0;
+}
+table {
+display: block;
+width: 100%;
+overflow: auto;
+word-break: normal;
+word-break: keep-all;
+}
+table th {
+font-weight: bold;
+}
+table th,
+table td {
+padding: 6px 13px;
+border: 1px solid #ddd;
+}
+table tr {
+background-color: #fff;
+border-top: 1px solid #ccc;
+}
+table tr:nth-child(2n) {
+background-color: #f8f8f8;
+}
+img {
+max-width: 100%;
+box-sizing: content-box;
+background-color: #fff;
+}
+code {
+padding: 0;
+padding-top: 0.2em;
+padding-bottom: 0.2em;
+margin: 0;
+font-size: 85%;
+background-color: rgba(0,0,0,0.04);
+border-radius: 3px;
+}
+code:before,
+code:after {
+letter-spacing: -0.2em;
+content: "\00a0";
+}
+pre>code {
+padding: 0;
+margin: 0;
+font-size: 100%;
+word-break: normal;
+white-space: pre;
+background: transparent;
+border: 0;
+}
+.highlight {
+margin-bottom: 16px;
+}
+.highlight pre,
+pre {
+padding: 16px;
+overflow: auto;
+font-size: 85%;
+line-height: 1.45;
+background-color: #f7f7f7;
+border-radius: 3px;
+}
+.highlight pre {
+margin-bottom: 0;
+word-break: normal;
+}
+pre {
+word-wrap: normal;
+}
+pre code {
+display: inline;
+max-width: initial;
+padding: 0;
+margin: 0;
+overflow: initial;
+line-height: inherit;
+word-wrap: normal;
+background-color: transparent;
+border: 0;
+}
+pre code:before,
+pre code:after {
+content: normal;
+}
+kbd {
+display: inline-block;
+padding: 3px 5px;
+font-size: 11px;
+line-height: 10px;
+color: #555;
+vertical-align: middle;
+background-color: #fcfcfc;
+border: solid 1px #ccc;
+border-bottom-color: #bbb;
+border-radius: 3px;
+box-shadow: inset 0 -1px 0 #bbb;
+}
+.pl-c {
+color: #969896;
+}
+.pl-c1,
+.pl-s .pl-v {
+color: #0086b3;
+}
+.pl-e,
+.pl-en {
+color: #795da3;
+}
+.pl-s .pl-s1,
+.pl-smi {
+color: #333;
+}
+.pl-ent {
+color: #63a35c;
+}
+.pl-k {
+color: #a71d5d;
+}
+.pl-pds,
+.pl-s,
+.pl-s .pl-pse .pl-s1,
+.pl-sr,
+.pl-sr .pl-cce,
+.pl-sr .pl-sra,
+.pl-sr .pl-sre {
+color: #183691;
+}
+.pl-v {
+color: #ed6a43;
+}
+.pl-id {
+color: #b52a1d;
+}
+.pl-ii {
+background-color: #b52a1d;
+color: #f8f8f8;
+}
+.pl-sr .pl-cce {
+color: #63a35c;
+font-weight: bold;
+}
+.pl-ml {
+color: #693a17;
+}
+.pl-mh,
+.pl-mh .pl-en,
+.pl-ms {
+color: #1d3e81;
+font-weight: bold;
+}
+.pl-mq {
+color: #008080;
+}
+.pl-mi {
+color: #333;
+font-style: italic;
+}
+.pl-mb {
+color: #333;
+font-weight: bold;
+}
+.pl-md {
+background-color: #ffecec;
+color: #bd2c00;
+}
+.pl-mi1 {
+background-color: #eaffea;
+color: #55a532;
+}
+.pl-mdr {
+color: #795da3;
+font-weight: bold;
+}
+.pl-mo {
+color: #1d3e81;
+}
+kbd {
+display: inline-block;
+padding: 3px 5px;
+font: 11px Consolas, "Liberation Mono", Menlo, Courier, monospace;
+line-height: 10px;
+color: #555;
+vertical-align: middle;
+background-color: #fcfcfc;
+border: solid 1px #ccc;
+border-bottom-color: #bbb;
+border-radius: 3px;
+box-shadow: inset 0 -1px 0 #bbb;
+}
+.task-list-item {
+list-style-type: none;
+}
+.task-list-item+.task-list-item {
+margin-top: 3px;
+}
+.task-list-item input {
+margin: 0 0.35em 0.25em -1.6em;
+vertical-align: middle;
+}
+:checked+.radio-label {
+z-index: 1;
+position: relative;
+border-color: #4078c0;
+}
+.sourceLine {
+display: inline-block;
+}
+code .kw { color: #000000; }
+code .dt { color: #ed6a43; }
+code .dv { color: #009999; }
+code .bn { color: #009999; }
+code .fl { color: #009999; }
+code .ch { color: #009999; }
+code .st { color: #183691; }
+code .co { color: #969896; }
+code .ot { color: #0086b3; }
+code .al { color: #a61717; }
+code .fu { color: #63a35c; }
+code .er { color: #a61717; background-color: #e3d2d2; }
+code .wa { color: #000000; }
+code .cn { color: #008080; }
+code .sc { color: #008080; }
+code .vs { color: #183691; }
+code .ss { color: #183691; }
+code .im { color: #000000; }
+code .va {color: #008080; }
+code .cf { color: #000000; }
+code .op { color: #000000; }
+code .bu { color: #000000; }
+code .ex { color: #000000; }
+code .pp { color: #999999; }
+code .at { color: #008080; }
+code .do { color: #969896; }
+code .an { color: #008080; }
+code .cv { color: #008080; }
+code .in { color: #008080; }
+</style>
+<style>
+body {
+  box-sizing: border-box;
+  min-width: 200px;
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 45px;
+  padding-top: 0px;
+}
+</style>
+
+</head>
+
+<body>
+
+<h1 id="processo-cientista-análise-exploratória">Processo Cientista: Análise Exploratória</h1>
+<ul>
+<li><a href="#introdução">Introdução</a></li>
+<li><a href="#importação-dos-dados">Importação dos dados</a></li>
+<li><a href="#análises-preliminares">Análises preliminares</a></li>
+<li><a href="#diagnóstico-da-base">Diagnóstico da base</a>
+<ul>
+<li><a href="#destaques">Destaques:</a></li>
+</ul></li>
+<li><a href="#análise-exploratória">Análise exploratória</a></li>
+<li><a href="#dataexplorer">DataExplorer</a></li>
+<li><a href="#conclusão">Conclusão</a></li>
+</ul>
+<h2 id="introdução">Introdução</h2>
+<p>Para conhecer melhor os dados com que vamos trabalhar, vamos conduzir uma análise exploratória das bases disponibilizadas, mantendo em mente o nosso objetivo: construir um modelo preditivo para determinar se vai ou não chover amanhã. Vamos carregar os pacotes que serão utilizados:</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb1-1" title="1"><span class="kw">library</span>(tidyverse)</a></code></pre></div>
+<h2 id="importação-dos-dados">Importação dos dados</h2>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb2-1" title="1">rain_data_aus &lt;-<span class="st"> </span><span class="kw">read_csv</span>(<span class="st">&#39;data/rain_data_aus.csv&#39;</span>)</a>
+<a class="sourceLine" id="cb2-2" title="2">wind_table_<span class="dv">01</span> &lt;-<span class="st"> </span><span class="kw">read_csv</span>(<span class="st">&#39;data/wind_table_01.csv&#39;</span>)</a>
+<a class="sourceLine" id="cb2-3" title="3">wind_table_<span class="dv">02</span> &lt;-<span class="st"> </span><span class="kw">read_csv</span>(<span class="st">&#39;data/wind_table_02.csv&#39;</span>)</a>
+<a class="sourceLine" id="cb2-4" title="4">wind_table_<span class="dv">03</span> &lt;-<span class="st"> </span><span class="kw">read_csv</span>(<span class="st">&#39;data/wind_table_03.csv&#39;</span>)</a>
+<a class="sourceLine" id="cb2-5" title="5">wind_table_<span class="dv">04</span> &lt;-<span class="st"> </span><span class="kw">read_csv</span>(<span class="st">&#39;data/wind_table_04.csv&#39;</span>)</a>
+<a class="sourceLine" id="cb2-6" title="6">wind_table_<span class="dv">05</span> &lt;-<span class="st"> </span><span class="kw">read_csv</span>(<span class="st">&#39;data/wind_table_05.csv&#39;</span>)</a>
+<a class="sourceLine" id="cb2-7" title="7">wind_table_<span class="dv">06</span> &lt;-<span class="st"> </span><span class="kw">read_csv</span>(<span class="st">&#39;data/wind_table_06.csv&#39;</span>)</a>
+<a class="sourceLine" id="cb2-8" title="8">wind_table_<span class="dv">07</span> &lt;-<span class="st"> </span><span class="kw">read_csv</span>(<span class="st">&#39;data/wind_table_07.csv&#39;</span>)</a>
+<a class="sourceLine" id="cb2-9" title="9">wind_table_<span class="dv">08</span> &lt;-<span class="st"> </span><span class="kw">read_csv</span>(<span class="st">&#39;data/wind_table_08.csv&#39;</span>)</a></code></pre></div>
+<h2 id="análises-preliminares">Análises preliminares</h2>
+<p>Vamos dar uma primeira olhada em cada uma das bases carregadas:</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb3-1" title="1"><span class="kw">glimpse</span>(rain_data_aus)</a></code></pre></div>
+<pre><code>## Observations: 142,193
+## Variables: 23
+## $ date             &lt;date&gt; 2008-12-01, 2008-12-02, 2008-12-03, 2008-12-04, 2008-12-0...
+## $ location         &lt;chr&gt; &quot;Albury&quot;, &quot;Albury&quot;, &quot;Albury&quot;, &quot;Albury&quot;, &quot;Albury&quot;, &quot;Albury&quot;...
+## $ mintemp          &lt;dbl&gt; 13.4, 7.4, 12.9, 9.2, 17.5, 14.6, 14.3, 7.7, 9.7, 13.1, 13...
+## $ maxtemp          &lt;dbl&gt; 22.9, 25.1, 25.7, 28.0, 32.3, 29.7, 25.0, 26.7, 31.9, 30.1...
+## $ rainfall         &lt;dbl&gt; 0.6, 0.0, 0.0, 0.0, 1.0, 0.2, 0.0, 0.0, 0.0, 1.4, 0.0, 2.2...
+## $ evaporation      &lt;lgl&gt; NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA...
+## $ sunshine         &lt;lgl&gt; NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA...
+## $ humidity9am      &lt;dbl&gt; 71, 44, 38, 45, 82, 55, 49, 48, 42, 58, 48, 89, 76, 65, 50...
+## $ humidity3pm      &lt;dbl&gt; 22, 25, 30, 16, 33, 23, 19, 19, 9, 27, 22, 91, 93, 43, 28,...
+## $ pressure9am      &lt;dbl&gt; 1007.7, 1010.6, 1007.6, 1017.6, 1010.8, 1009.2, 1009.6, 10...
+## $ pressure3pm      &lt;dbl&gt; 1007.1, 1007.8, 1008.7, 1012.8, 1006.0, 1005.4, 1008.2, 10...
+## $ cloud9am         &lt;dbl&gt; 8, NA, NA, NA, 7, NA, 1, NA, NA, NA, NA, 8, 8, NA, 0, 8, 8...
+## $ cloud3pm         &lt;dbl&gt; NA, NA, 2, NA, 8, NA, NA, NA, NA, NA, NA, 8, 8, 7, NA, 1, ...
+## $ temp9am          &lt;dbl&gt; 16.9, 17.2, 21.0, 18.1, 17.8, 20.6, 18.1, 16.3, 18.3, 20.1...
+## $ temp3pm          &lt;dbl&gt; 21.8, 24.3, 23.2, 26.5, 29.7, 28.9, 24.6, 25.5, 30.2, 28.2...
+## $ raintoday        &lt;chr&gt; &quot;No&quot;, &quot;No&quot;, &quot;No&quot;, &quot;No&quot;, &quot;No&quot;, &quot;No&quot;, &quot;No&quot;, &quot;No&quot;, &quot;No&quot;, &quot;Yes...
+## $ amountOfRain     &lt;dbl&gt; 0.0, 0.0, 0.0, 1.0, 0.2, 0.0, 0.0, 0.0, 1.4, 0.0, 2.2, 15....
+## $ raintomorrow     &lt;chr&gt; &quot;No&quot;, &quot;No&quot;, &quot;No&quot;, &quot;No&quot;, &quot;No&quot;, &quot;No&quot;, &quot;No&quot;, &quot;No&quot;, &quot;Yes&quot;, &quot;No...
+## $ temp             &lt;dbl&gt; 29.480000, 32.120000, 32.840000, 35.600000, 40.760000, 37....
+## $ humidity         &lt;dbl&gt; 28.400000, 2.208569, 38.000000, 21.200000, 41.600000, 29.6...
+## $ precipitation3pm &lt;dbl&gt; 12, 10, 17, 8, 9, 8, 8, 7, 19, 7, 13, 6, 15, 14, 7, 12, 11...
+## $ precipitation9am &lt;dbl&gt; 5.115360, 21.497100, 20.782859, 12.028646, 11.883546, 17.3...
+## $ modelo_vigente   &lt;dbl&gt; 0.089824603, 0.023477098, 0.027580456, 0.023961612, 0.2201...
+</code></pre>
+<p>Nos foi fornecido um dicionário dos nomes das colunas:</p>
+<table>
+<thead>
+<tr class="header">
+<th>Variable</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Date</td>
+<td>The date of observation</td>
+</tr>
+<tr class="even">
+<td>Location</td>
+<td>The common name of the location of the weather station</td>
+</tr>
+<tr class="odd">
+<td>MinTemp</td>
+<td>The minimum temperature in degrees celsius</td>
+</tr>
+<tr class="even">
+<td>MaxTemp</td>
+<td>The maximum temperature in degrees celsius</td>
+</tr>
+<tr class="odd">
+<td>Rainfall</td>
+<td>The amount of rainfall recorded for the day in mm</td>
+</tr>
+<tr class="even">
+<td>Evaporation</td>
+<td>The so-called Class A pan evaporation (mm) in the 24 hours to 9am</td>
+</tr>
+<tr class="odd">
+<td>Sunshine</td>
+<td>The number of hours of bright sunshine in the day.</td>
+</tr>
+<tr class="even">
+<td>WindGustDir</td>
+<td>The direction of the strongest wind gust in the 24 hours to midnight</td>
+</tr>
+<tr class="odd">
+<td>WindGustSpeed</td>
+<td>The speed (km/h) of the strongest wind gust in the 24 hours to midnight</td>
+</tr>
+<tr class="even">
+<td>WindDir9am</td>
+<td>Direction of the wind at 9am</td>
+</tr>
+<tr class="odd">
+<td>WindDir3pm</td>
+<td>Direction of the wind at 3pm</td>
+</tr>
+<tr class="even">
+<td>WindSpeed9am</td>
+<td>Wind speed (km/hr) averaged over 10 minutes prior to 9am</td>
+</tr>
+<tr class="odd">
+<td>WindSpeed3pm</td>
+<td>Wind speed (km/hr) averaged over 10 minutes prior to 3pm</td>
+</tr>
+<tr class="even">
+<td>Humidity9am</td>
+<td>Humidity (percent) at 9am</td>
+</tr>
+<tr class="odd">
+<td>Humidity3pm</td>
+<td>Humidity (percent) at 3pm</td>
+</tr>
+<tr class="even">
+<td>Pressure9am</td>
+<td>Atmospheric pressure (hpa) reduced to mean sea level at 9am</td>
+</tr>
+<tr class="odd">
+<td>Pressure3pm</td>
+<td>Atmospheric pressure (hpa) reduced to mean sea level at 3pm</td>
+</tr>
+<tr class="even">
+<td>Cloud9am</td>
+<td>Fraction of sky obscured by cloud at 9am. This is measured in “oktas”, which are a unit of eigths. It records how many eigths of the sky are obscured by cloud. A 0 measure indicates completely clear sky whilst an 8 indicates that it is completely overcast.</td>
+</tr>
+<tr class="odd">
+<td>Cloud3pm</td>
+<td>Fraction of sky obscured by cloud (in “oktas”: eighths) at 3pm. See Cload9am for a description of the values</td>
+</tr>
+<tr class="even">
+<td>Temp9am</td>
+<td>Temperature (degrees C) at 9am</td>
+</tr>
+<tr class="odd">
+<td>Temp3pm</td>
+<td>Temperature (degrees C) at 3pm</td>
+</tr>
+<tr class="even">
+<td>Precipitation9am</td>
+<td>The amount of rain in mm prior to 9am</td>
+</tr>
+<tr class="odd">
+<td>Precipitation3pm</td>
+<td>The amount of rain in mm prior to 3pm</td>
+</tr>
+<tr class="even">
+<td>AmountOfRain</td>
+<td>The amount of rain in mm</td>
+</tr>
+<tr class="odd">
+<td>Temp</td>
+<td>Temperature (degrees C)</td>
+</tr>
+<tr class="even">
+<td>Humidity</td>
+<td>Humidity (percent)</td>
+</tr>
+<tr class="odd">
+<td>RainToday</td>
+<td>Boolean: 1 if precipitation (mm) in the 24 hours to 9am exceeds 1mm, otherwise 0</td>
+</tr>
+<tr class="even">
+<td>RainTomorrow</td>
+<td>The target variable. Did it rain tomorrow?</td>
+</tr>
+</tbody>
+</table>
+<p>Notamos algumas divergências:</p>
+<ol>
+<li>As variáveis <code>raintoday</code> e <code>raintomorrow</code> estão codificadas de forma diferente, isso deve ser tratado na fase de modelagem.</li>
+<li>Não há descrição da variável <code>modelo_vigente</code></li>
+</ol>
+<!-- end list -->
+
+<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb5-1" title="1"><span class="kw">summary</span>(rain_data_aus<span class="op">$</span>modelo_vigente)</a></code></pre></div>
+<pre><code>##    Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
+## 0.00000 0.03005 0.10085 0.22780 0.32951 0.99940
+</code></pre>
+<div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb7-1" title="1"><span class="kw">boxplot</span>(rain_data_aus<span class="op">$</span>modelo_vigente<span class="op">~</span>rain_data_aus<span class="op">$</span>raintomorrow)</a></code></pre></div>
+<p><img src="data:image/png;base64,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" /><!-- --></p>
+<p>Uma breve análise desta variável sugere que se trata das predições dadas por um modelo adotado atualmente para a mesma tarefa. A fim de evitar que nosso modelo seja viesado, não vamos usar essa variável</p>
+<p>Vamos continuar analisando as bases carregadas:</p>
+<div class="sourceCode" id="cb8"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb8-1" title="1"><span class="kw">names</span>(wind_table_<span class="dv">01</span>)</a></code></pre></div>
+<pre><code>## [1] &quot;date&quot;           &quot;location&quot;       &quot;wind_gustdir&quot;   &quot;wind_gustspeed&quot; &quot;wind_dir9am&quot;   
+## [6] &quot;wind_dir3pm&quot;    &quot;wind_speed9am&quot;  &quot;wind_speed3pm&quot;
+</code></pre>
+<div class="sourceCode" id="cb10"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb10-1" title="1"><span class="kw">names</span>(wind_table_<span class="dv">02</span>)</a></code></pre></div>
+<pre><code>## [1] &quot;date&quot;           &quot;location&quot;       &quot;wind_gustdir&quot;   &quot;wind_gustspeed&quot; &quot;wind_dir9am&quot;   
+## [6] &quot;wind_dir3pm&quot;    &quot;wind_speed9am&quot;  &quot;wind_speed3pm&quot;
+</code></pre>
+<div class="sourceCode" id="cb12"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb12-1" title="1"><span class="kw">names</span>(wind_table_<span class="dv">03</span>)</a></code></pre></div>
+<pre><code>## [1] &quot;date&quot;          &quot;location&quot;      &quot;windgustdir&quot;   &quot;windgustspeed&quot; &quot;winddir9am&quot;   
+## [6] &quot;winddir3pm&quot;    &quot;windspeed9am&quot;  &quot;windspeed3pm&quot;
+</code></pre>
+<div class="sourceCode" id="cb14"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb14-1" title="1"><span class="kw">names</span>(wind_table_<span class="dv">04</span>)</a></code></pre></div>
+<pre><code>## [1] &quot;date&quot;          &quot;location&quot;      &quot;windgustdir&quot;   &quot;windgustspeed&quot; &quot;winddir9am&quot;   
+## [6] &quot;winddir3pm&quot;    &quot;windspeed9am&quot;  &quot;windspeed3pm&quot;
+</code></pre>
+<div class="sourceCode" id="cb16"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb16-1" title="1"><span class="kw">names</span>(wind_table_<span class="dv">05</span>)</a></code></pre></div>
+<pre><code>## [1] &quot;date&quot;          &quot;location&quot;      &quot;windgustdir&quot;   &quot;windgustspeed&quot; &quot;winddir9am&quot;   
+## [6] &quot;winddir3pm&quot;    &quot;windspeed9am&quot;  &quot;windspeed3pm&quot;
+</code></pre>
+<div class="sourceCode" id="cb18"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb18-1" title="1"><span class="kw">names</span>(wind_table_<span class="dv">06</span>)</a></code></pre></div>
+<pre><code>## [1] &quot;date&quot;          &quot;location&quot;      &quot;windgustdir&quot;   &quot;windgustspeed&quot; &quot;winddir9am&quot;   
+## [6] &quot;winddir3pm&quot;    &quot;windspeed9am&quot;  &quot;windspeed3pm&quot;
+</code></pre>
+<div class="sourceCode" id="cb20"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb20-1" title="1"><span class="kw">names</span>(wind_table_<span class="dv">07</span>)</a></code></pre></div>
+<pre><code>## [1] &quot;date&quot;          &quot;location&quot;      &quot;windgustdir&quot;   &quot;windgustspeed&quot; &quot;winddir9am&quot;   
+## [6] &quot;winddir3pm&quot;    &quot;windspeed9am&quot;  &quot;windspeed3pm&quot;
+</code></pre>
+<div class="sourceCode" id="cb22"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb22-1" title="1"><span class="kw">names</span>(wind_table_<span class="dv">08</span>)</a></code></pre></div>
+<pre><code>## [1] &quot;date&quot;          &quot;location&quot;      &quot;windgustdir&quot;   &quot;windgustspeed&quot; &quot;winddir9am&quot;   
+## [6] &quot;winddir3pm&quot;    &quot;windspeed9am&quot;  &quot;windspeed3pm&quot;
+</code></pre>
+<p>Notamos que as bases <code>wind_table_01</code> e <code>wind_table_01</code> usam nomes de colunas diferente das demais. Vamos corrigir isso e consolidar todas as bases numa única tabela:</p>
+<div class="sourceCode" id="cb24"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb24-1" title="1"><span class="kw">names</span>(wind_table_<span class="dv">01</span>) &lt;-<span class="st"> </span><span class="kw">names</span>(wind_table_<span class="dv">03</span>)</a>
+<a class="sourceLine" id="cb24-2" title="2"><span class="kw">names</span>(wind_table_<span class="dv">02</span>) &lt;-<span class="st"> </span><span class="kw">names</span>(wind_table_<span class="dv">03</span>)</a>
+<a class="sourceLine" id="cb24-3" title="3"></a>
+<a class="sourceLine" id="cb24-4" title="4">wind_data &lt;-<span class="st"> </span><span class="kw">bind_rows</span>(wind_table_<span class="dv">01</span>,</a>
+<a class="sourceLine" id="cb24-5" title="5">                       wind_table_<span class="dv">02</span>,</a>
+<a class="sourceLine" id="cb24-6" title="6">                       wind_table_<span class="dv">03</span>,</a>
+<a class="sourceLine" id="cb24-7" title="7">                       wind_table_<span class="dv">04</span>,</a>
+<a class="sourceLine" id="cb24-8" title="8">                       wind_table_<span class="dv">05</span>,</a>
+<a class="sourceLine" id="cb24-9" title="9">                       wind_table_<span class="dv">06</span>,</a>
+<a class="sourceLine" id="cb24-10" title="10">                       wind_table_<span class="dv">07</span>,</a>
+<a class="sourceLine" id="cb24-11" title="11">                       wind_table_<span class="dv">08</span>) <span class="op">%&gt;%</span><span class="st"> </span></a>
+<a class="sourceLine" id="cb24-12" title="12"><span class="st">  </span><span class="kw">distinct</span>()</a>
+<a class="sourceLine" id="cb24-13" title="13"></a>
+<a class="sourceLine" id="cb24-14" title="14">rain &lt;-<span class="st"> </span>rain_data_aus <span class="op">%&gt;%</span><span class="st"> </span></a>
+<a class="sourceLine" id="cb24-15" title="15"><span class="st">  </span><span class="kw">inner_join</span>(wind_data) <span class="op">%&gt;%</span><span class="st"> </span></a>
+<a class="sourceLine" id="cb24-16" title="16"><span class="st">  </span><span class="kw">distinct</span>()</a></code></pre></div>
+<pre><code>## Joining, by = c(&quot;date&quot;, &quot;location&quot;)
+</code></pre>
+<div class="sourceCode" id="cb26"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb26-1" title="1"><span class="kw">head</span>(rain)</a></code></pre></div>
+<pre><code>## # A tibble: 6 x 29
+##   date       location mintemp maxtemp rainfall evaporation sunshine humidity9am
+##   &lt;date&gt;     &lt;chr&gt;      &lt;dbl&gt;   &lt;dbl&gt;    &lt;dbl&gt; &lt;lgl&gt;       &lt;lgl&gt;          &lt;dbl&gt;
+## 1 2008-12-01 Albury      13.4    22.9      0.6 NA          NA                71
+## 2 2008-12-02 Albury       7.4    25.1      0   NA          NA                44
+## 3 2008-12-03 Albury      12.9    25.7      0   NA          NA                38
+## 4 2008-12-04 Albury       9.2    28        0   NA          NA                45
+## 5 2008-12-05 Albury      17.5    32.3      1   NA          NA                82
+## 6 2008-12-06 Albury      14.6    29.7      0.2 NA          NA                55
+## # ... with 21 more variables: humidity3pm &lt;dbl&gt;, pressure9am &lt;dbl&gt;, pressure3pm &lt;dbl&gt;,
+## #   cloud9am &lt;dbl&gt;, cloud3pm &lt;dbl&gt;, temp9am &lt;dbl&gt;, temp3pm &lt;dbl&gt;, raintoday &lt;chr&gt;,
+## #   amountOfRain &lt;dbl&gt;, raintomorrow &lt;chr&gt;, temp &lt;dbl&gt;, humidity &lt;dbl&gt;,
+## #   precipitation3pm &lt;dbl&gt;, precipitation9am &lt;dbl&gt;, modelo_vigente &lt;dbl&gt;,
+## #   windgustdir &lt;chr&gt;, windgustspeed &lt;dbl&gt;, winddir9am &lt;chr&gt;, winddir3pm &lt;chr&gt;,
+## #   windspeed9am &lt;dbl&gt;, windspeed3pm &lt;dbl&gt;
+</code></pre>
+<p>A partir de agora, vamos utilizar alguns pacotes que facilitam a automatização da análise exploratória, conforme estratégia descrita por (Staniak and Biecek 2019). Vamos focar em pacotes que geram relatórios automaticamente. O script que gera esses relatórios é o <code>exploratory_analysis/generate_reports.R</code>.</p>
+<h2 id="diagnóstico-da-base">Diagnóstico da base</h2>
+<p>O relatório pode ser visualizado no arquivo <a href="http://htmlpreview.github.io/?https://github.com/guilhermejordan/processo_cientista/blob/master/exploratory_analysis/reports/dlookr_diagnose.html">reports/dlookr_diagnose.html</a>.</p>
+<h3 id="destaques">Destaques:</h3>
+<ol>
+<li>As variáveis <code>evaporation</code>, <code>sunshine</code>, <code>cloud9am</code> e <code>cloud3pm</code> tem muitos missings, requerendo atenção na fase de modelagem.</li>
+<li>A maioria das variáveis numéricas apresenta potenciais outliers, requerendo atenção na fase de modelagem.</li>
+<li>Curiosamente, todos os valores da variável <code>precipitation9am</code> são únicos.</li>
+</ol>
+<h2 id="análise-exploratória">Análise exploratória</h2>
+<p>O relatório pode ser visualizado no arquivo <a href="http://htmlpreview.github.io/?https://github.com/guilhermejordan/processo_cientista/blob/master/exploratory_analysis/reports/dlookr_eda.html">reports/dlookr_eda.html</a>. O principal destaque é que a distribuição da maior parte das variáveis numéricas é razoavelmente próxima da Normal, apesar dos outliers. Isso pode colaborar na fase de modelagem. Temos também diversas variáveis com forte correlação, o que pode ajudar reduzir o número de variáveis utilizadas pelo modelo.</p>
+<h2 id="dataexplorer">DataExplorer</h2>
+<p>O relatório do DataExplorer pode ser visualizado no arquivo <a href="http://htmlpreview.github.io/?https://github.com/guilhermejordan/processo_cientista/blob/master/exploratory_analysis/reports/dataexplorer.html">reports/dataexplorer.html</a>. Destaque para a seção <a href="http://htmlpreview.github.io/?https://github.com/guilhermejordan/processo_cientista/blob/master/exploratory_analysis/reports/dataexplorer.html#bivariate-distribution">Bivariate Distribution</a> que já sugere que algumas variáveis são úteis para a classificação, inclusive aquelas com muitos missings como <code>sunshine</code>, <code>cloud9am</code> e <code>cloud3pm</code>.</p>
+<p>Além disso, identficamos um problema: a variável <code>amountOfRain</code> de fato corresponde à quantidade de chuva amanhã. Desta forma, se usássemos esta variável no treino, estaríamos “trapaceando”. Mais detalhes podem ser lidos na discussão do dataset original <a href="https://www.kaggle.com/jsphyg/weather-dataset-rattle-package/discussion/78316">aqui</a>.</p>
+<h2 id="conclusão">Conclusão</h2>
+<p>A análise exploratória sugere que, apesar das bases serem razoavelmente limpas, ainda serão necessários alguns preprocessamentos na fase de modelagem, a depender do modelo adotado.</p>
+<div id="refs" class="references">
+
+<div id="ref-staniak2019landscape">
+
+<p>Staniak, Mateusz, and Przemyslaw Biecek. 2019. “The Landscape of R Packages for Automated Exploratory Data Analysis.” <a href="http://arxiv.org/abs/1904.02101">http://arxiv.org/abs/1904.02101</a>.</p>
+</div>
+
+</div>
+
+</body>
+</html>
