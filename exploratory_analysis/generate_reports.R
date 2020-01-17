@@ -28,6 +28,6 @@ rain %>%
 
 rain %>%
   create_report(y = 'raintomorrow',
-                output_dir = '~/processo_cientista/exploratory_analysis/reports',
+                output_dir = 'exploratory_analysis/reports',
                 output_file = 'dataexplorer.html')
 
