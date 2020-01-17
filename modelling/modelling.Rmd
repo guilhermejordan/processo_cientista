@@ -66,8 +66,9 @@ rain_fft <-
           main = "Will it rain tomorrow?",
           decision.labels = c("Bring sunscreen", "Bring umbrella"))
 
-saveRDS(rain_fft, 'modelling/rain_fft.RDS')
+# saveRDS(rain_fft, 'modelling/rain_fft.RDS')
 ```
+
 
 
 
