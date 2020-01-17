@@ -119,7 +119,7 @@ rain <- rain_data_aus %>%
   inner_join(wind_data) %>% 
   distinct()
 
-saveRDS(rain, 'data/rain.RDS')
+head(rain)
 ```
 
 A partir de agora, vamos utilizar alguns pacotes que facilitam a automatização da análise exploratória [@staniak2019landscape]. Vamos focar em pacotes que geram relatórios automaticamente. O script que gera esses relatórios é o `exploratory_analysis/generate_reports.R`.
@@ -143,13 +143,11 @@ O relatório pode ser visualizado no arquivo [reports/dlookr_eda.html](http://ht
 
 O relatório do DataExplorer pode ser visualizado no arquivo [reports/dataexplorer.html](http://htmlpreview.github.io/?https://github.com/guilhermejordan/processo_cientista/blob/master/exploratory_analysis/reports/dataexplorer.html). Destaque para a seção boxplots (by raintomorrow) que já sugere que algumas variáveis são úteis para a classificação.
 
+Além disso, identficamos um problema: a variável `amountOfRain` de fato corresponde à quantidade de chuva amanhã. Desta forma, se usássemos esta variável no treino, estaríamos "trapaceando". Mais detalhes [aqui](https://www.kaggle.com/jsphyg/weather-dataset-rattle-package/discussion/78316).
+
 ## Conclusão
 
-A análise exploratória sugere que, apesar das bases serem razoavelmente limpas, ainda serão necessários alguns preprocessamentos na fase de modelagem, dentre eles:
-
-- imputação de valores missing
-- tratmento de outliers
-- mudança de escala de variáveis
+A análise exploratória sugere que, apesar das bases serem razoavelmente limpas, ainda serão necessários alguns preprocessamentos na fase de modelagem, a depender do modelo adotado.
 
 
 

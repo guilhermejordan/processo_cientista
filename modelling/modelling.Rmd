@@ -12,4 +12,5 @@ knitr::opts_chunk$set(echo = TRUE)
 ```{r loadlibs, results='hide', message=F, warning=F}
 library(tidyverse)
 library(caret)
+library(xgboost)
 ```

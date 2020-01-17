@@ -4,13 +4,15 @@ library(DataExplorer)
 
 ## load data
 
-rain <- readRDS('data/rain.RDS')
+source('r_functions/load_rain_dataset.R')
+
+rain <- load_rain_dataset()
 
 ## dlookr diagnose
 
 rain %>%
   diagnose_report(output_format = 'html',
-                  output_dir = '~/processo_cientista/exploratory_analysis/reports',
+                  output_dir = 'exploratory_analysis/reports',
                   output_file = 'dlookr_diagnose.html',
                   browse = FALSE)
 
@@ -18,7 +20,7 @@ rain %>%
 
 rain %>%
   eda_report(output_format = 'html',
-             output_dir = '~/processo_cientista/exploratory_analysis/reports',
+             output_dir = 'exploratory_analysis/reports',
              output_file = 'dlookr_eda.html',
              browse = FALSE)
 
