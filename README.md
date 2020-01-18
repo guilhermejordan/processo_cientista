@@ -2,7 +2,7 @@
 
 [Link](https://www.kaggle.com/guilhermejordan/train-xgb) para o kernel do kaggle usado para o treino dos modelos.
 
-[Último modelo treinado](https://www.kaggle.com/guilhermejordan/train-xgb?scriptVersionId=27138162).
+[Último modelo treinado](https://www.kaggle.com/guilhermejordan/train-xgb?scriptVersionId=27139376).
 
 ## Texto original
 
