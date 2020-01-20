@@ -76,15 +76,15 @@ RainTomorrow |  The target variable. Did it rain tomorrow?
 
 Notamos algumas divergências:
 
-1. As variáveis `raintoday` e `raintomorrow` estão codificadas de forma diferente, isso deve ser tratado na fase de modelagem.
+1. As variáveis `raintoday` e `raintomorrow` estão codificadas de forma diferente do dicionário, isso deve ser considerado na fase de modelagem.
 2. Não há descrição da variável `modelo_vigente`
 
 ```{r summary_modelo_vigente}
 summary(rain_data_aus$modelo_vigente)
-boxplot(rain_data_aus$modelo_vigente~rain_data_aus$raintomorrow)
+boxplot(rain_data_aus$modelo_vigente ~ rain_data_aus$raintomorrow)
 ```
 
-Uma breve análise desta variável sugere que se trata das predições dadas por um modelo adotado atualmente para a mesma tarefa. A fim de evitar que nosso modelo seja viesado, não vamos usar essa variável
+Uma breve análise desta variável sugere que se trata das predições dadas por um modelo adotado atualmente para a mesma tarefa. Uma possibilidade é explorar esta variável na modelagem como uma feature e dessa forma tentar obter um modelo melhor.
 
 Vamos continuar analisando as bases carregadas:
 
@@ -99,7 +99,7 @@ names(wind_table_07)
 names(wind_table_08)
 ```
 
-Notamos que as bases `wind_table_01` e `wind_table_01` usam nomes de colunas diferente das demais. Vamos corrigir isso e consolidar todas as bases numa única tabela:
+Notamos que as bases `wind_table_01` e `wind_table_02` usam nomes de colunas diferentes das demais. Vamos corrigir isso e consolidar todas as bases numa única tabela:
 
 ```{r joindata}
 names(wind_table_01) <- names(wind_table_03)

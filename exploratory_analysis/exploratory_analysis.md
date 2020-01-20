@@ -45,29 +45,29 @@ glimpse(rain_data_aus)
 
     ## Observations: 142,193
     ## Variables: 23
-    ## $ date             <date> 2008-12-01, 2008-12-02, 2008-12-03, 2008-12-04, 2008-12-0...
-    ## $ location         <chr> "Albury", "Albury", "Albury", "Albury", "Albury", "Albury"...
-    ## $ mintemp          <dbl> 13.4, 7.4, 12.9, 9.2, 17.5, 14.6, 14.3, 7.7, 9.7, 13.1, 13...
-    ## $ maxtemp          <dbl> 22.9, 25.1, 25.7, 28.0, 32.3, 29.7, 25.0, 26.7, 31.9, 30.1...
-    ## $ rainfall         <dbl> 0.6, 0.0, 0.0, 0.0, 1.0, 0.2, 0.0, 0.0, 0.0, 1.4, 0.0, 2.2...
-    ## $ evaporation      <lgl> NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA...
-    ## $ sunshine         <lgl> NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA...
-    ## $ humidity9am      <dbl> 71, 44, 38, 45, 82, 55, 49, 48, 42, 58, 48, 89, 76, 65, 50...
-    ## $ humidity3pm      <dbl> 22, 25, 30, 16, 33, 23, 19, 19, 9, 27, 22, 91, 93, 43, 28,...
-    ## $ pressure9am      <dbl> 1007.7, 1010.6, 1007.6, 1017.6, 1010.8, 1009.2, 1009.6, 10...
-    ## $ pressure3pm      <dbl> 1007.1, 1007.8, 1008.7, 1012.8, 1006.0, 1005.4, 1008.2, 10...
-    ## $ cloud9am         <dbl> 8, NA, NA, NA, 7, NA, 1, NA, NA, NA, NA, 8, 8, NA, 0, 8, 8...
-    ## $ cloud3pm         <dbl> NA, NA, 2, NA, 8, NA, NA, NA, NA, NA, NA, 8, 8, 7, NA, 1, ...
-    ## $ temp9am          <dbl> 16.9, 17.2, 21.0, 18.1, 17.8, 20.6, 18.1, 16.3, 18.3, 20.1...
-    ## $ temp3pm          <dbl> 21.8, 24.3, 23.2, 26.5, 29.7, 28.9, 24.6, 25.5, 30.2, 28.2...
-    ## $ raintoday        <chr> "No", "No", "No", "No", "No", "No", "No", "No", "No", "Yes...
-    ## $ amountOfRain     <dbl> 0.0, 0.0, 0.0, 1.0, 0.2, 0.0, 0.0, 0.0, 1.4, 0.0, 2.2, 15....
-    ## $ raintomorrow     <chr> "No", "No", "No", "No", "No", "No", "No", "No", "Yes", "No...
-    ## $ temp             <dbl> 29.480000, 32.120000, 32.840000, 35.600000, 40.760000, 37....
-    ## $ humidity         <dbl> 28.400000, 2.208569, 38.000000, 21.200000, 41.600000, 29.6...
-    ## $ precipitation3pm <dbl> 12, 10, 17, 8, 9, 8, 8, 7, 19, 7, 13, 6, 15, 14, 7, 12, 11...
-    ## $ precipitation9am <dbl> 5.115360, 21.497100, 20.782859, 12.028646, 11.883546, 17.3...
-    ## $ modelo_vigente   <dbl> 0.089824603, 0.023477098, 0.027580456, 0.023961612, 0.2201...
+    ## $ date             <date> 2008-12-01, 2008-12-02, 2008-12-03, 2008-12-...
+    ## $ location         <chr> "Albury", "Albury", "Albury", "Albury", "Albu...
+    ## $ mintemp          <dbl> 13.4, 7.4, 12.9, 9.2, 17.5, 14.6, 14.3, 7.7, ...
+    ## $ maxtemp          <dbl> 22.9, 25.1, 25.7, 28.0, 32.3, 29.7, 25.0, 26....
+    ## $ rainfall         <dbl> 0.6, 0.0, 0.0, 0.0, 1.0, 0.2, 0.0, 0.0, 0.0, ...
+    ## $ evaporation      <lgl> NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, N...
+    ## $ sunshine         <lgl> NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, N...
+    ## $ humidity9am      <dbl> 71, 44, 38, 45, 82, 55, 49, 48, 42, 58, 48, 8...
+    ## $ humidity3pm      <dbl> 22, 25, 30, 16, 33, 23, 19, 19, 9, 27, 22, 91...
+    ## $ pressure9am      <dbl> 1007.7, 1010.6, 1007.6, 1017.6, 1010.8, 1009....
+    ## $ pressure3pm      <dbl> 1007.1, 1007.8, 1008.7, 1012.8, 1006.0, 1005....
+    ## $ cloud9am         <dbl> 8, NA, NA, NA, 7, NA, 1, NA, NA, NA, NA, 8, 8...
+    ## $ cloud3pm         <dbl> NA, NA, 2, NA, 8, NA, NA, NA, NA, NA, NA, 8, ...
+    ## $ temp9am          <dbl> 16.9, 17.2, 21.0, 18.1, 17.8, 20.6, 18.1, 16....
+    ## $ temp3pm          <dbl> 21.8, 24.3, 23.2, 26.5, 29.7, 28.9, 24.6, 25....
+    ## $ raintoday        <chr> "No", "No", "No", "No", "No", "No", "No", "No...
+    ## $ amountOfRain     <dbl> 0.0, 0.0, 0.0, 1.0, 0.2, 0.0, 0.0, 0.0, 1.4, ...
+    ## $ raintomorrow     <chr> "No", "No", "No", "No", "No", "No", "No", "No...
+    ## $ temp             <dbl> 29.48, 32.12, 32.84, 35.60, 40.76, 37.64, 32....
+    ## $ humidity         <dbl> 28.400000, 2.208569, 38.000000, 21.200000, 41...
+    ## $ precipitation3pm <dbl> 12, 10, 17, 8, 9, 8, 8, 7, 19, 7, 13, 6, 15, ...
+    ## $ precipitation9am <dbl> 5.115360, 21.497100, 20.782859, 12.028646, 11...
+    ## $ modelo_vigente   <dbl> 0.089824603, 0.023477098, 0.027580456, 0.0239...
 
 Nos foi fornecido um dicionário dos nomes das
 colunas:
@@ -106,7 +106,8 @@ colunas:
 Notamos algumas divergências:
 
 1.  As variáveis `raintoday` e `raintomorrow` estão codificadas de forma
-    diferente, isso deve ser tratado na fase de modelagem.
+    diferente do dicionário, isso deve ser considerado na fase de
+    modelagem.
 2.  Não há descrição da variável `modelo_vigente`
 
 <!-- end list -->
@@ -119,14 +120,15 @@ summary(rain_data_aus$modelo_vigente)
     ## 0.00000 0.03005 0.10085 0.22780 0.32951 0.99940
 
 ``` r
-boxplot(rain_data_aus$modelo_vigente~rain_data_aus$raintomorrow)
+boxplot(rain_data_aus$modelo_vigente ~ rain_data_aus$raintomorrow)
 ```
 
 ![](exploratory_analysis_files/figure-gfm/summary_modelo_vigente-1.png)<!-- -->
 
 Uma breve análise desta variável sugere que se trata das predições dadas
-por um modelo adotado atualmente para a mesma tarefa. A fim de evitar
-que nosso modelo seja viesado, não vamos usar essa variável
+por um modelo adotado atualmente para a mesma tarefa. Uma possibilidade
+é explorar esta variável na modelagem como uma feature e dessa forma
+tentar obter um modelo melhor.
 
 Vamos continuar analisando as bases
     carregadas:
@@ -135,60 +137,60 @@ Vamos continuar analisando as bases
 names(wind_table_01)
 ```
 
-    ## [1] "date"           "location"       "wind_gustdir"   "wind_gustspeed" "wind_dir9am"   
-    ## [6] "wind_dir3pm"    "wind_speed9am"  "wind_speed3pm"
+    ## [1] "date"           "location"       "wind_gustdir"   "wind_gustspeed"
+    ## [5] "wind_dir9am"    "wind_dir3pm"    "wind_speed9am"  "wind_speed3pm"
 
 ``` r
 names(wind_table_02)
 ```
 
-    ## [1] "date"           "location"       "wind_gustdir"   "wind_gustspeed" "wind_dir9am"   
-    ## [6] "wind_dir3pm"    "wind_speed9am"  "wind_speed3pm"
+    ## [1] "date"           "location"       "wind_gustdir"   "wind_gustspeed"
+    ## [5] "wind_dir9am"    "wind_dir3pm"    "wind_speed9am"  "wind_speed3pm"
 
 ``` r
 names(wind_table_03)
 ```
 
-    ## [1] "date"          "location"      "windgustdir"   "windgustspeed" "winddir9am"   
-    ## [6] "winddir3pm"    "windspeed9am"  "windspeed3pm"
+    ## [1] "date"          "location"      "windgustdir"   "windgustspeed"
+    ## [5] "winddir9am"    "winddir3pm"    "windspeed9am"  "windspeed3pm"
 
 ``` r
 names(wind_table_04)
 ```
 
-    ## [1] "date"          "location"      "windgustdir"   "windgustspeed" "winddir9am"   
-    ## [6] "winddir3pm"    "windspeed9am"  "windspeed3pm"
+    ## [1] "date"          "location"      "windgustdir"   "windgustspeed"
+    ## [5] "winddir9am"    "winddir3pm"    "windspeed9am"  "windspeed3pm"
 
 ``` r
 names(wind_table_05)
 ```
 
-    ## [1] "date"          "location"      "windgustdir"   "windgustspeed" "winddir9am"   
-    ## [6] "winddir3pm"    "windspeed9am"  "windspeed3pm"
+    ## [1] "date"          "location"      "windgustdir"   "windgustspeed"
+    ## [5] "winddir9am"    "winddir3pm"    "windspeed9am"  "windspeed3pm"
 
 ``` r
 names(wind_table_06)
 ```
 
-    ## [1] "date"          "location"      "windgustdir"   "windgustspeed" "winddir9am"   
-    ## [6] "winddir3pm"    "windspeed9am"  "windspeed3pm"
+    ## [1] "date"          "location"      "windgustdir"   "windgustspeed"
+    ## [5] "winddir9am"    "winddir3pm"    "windspeed9am"  "windspeed3pm"
 
 ``` r
 names(wind_table_07)
 ```
 
-    ## [1] "date"          "location"      "windgustdir"   "windgustspeed" "winddir9am"   
-    ## [6] "winddir3pm"    "windspeed9am"  "windspeed3pm"
+    ## [1] "date"          "location"      "windgustdir"   "windgustspeed"
+    ## [5] "winddir9am"    "winddir3pm"    "windspeed9am"  "windspeed3pm"
 
 ``` r
 names(wind_table_08)
 ```
 
-    ## [1] "date"          "location"      "windgustdir"   "windgustspeed" "winddir9am"   
-    ## [6] "winddir3pm"    "windspeed9am"  "windspeed3pm"
+    ## [1] "date"          "location"      "windgustdir"   "windgustspeed"
+    ## [5] "winddir9am"    "winddir3pm"    "windspeed9am"  "windspeed3pm"
 
-Notamos que as bases `wind_table_01` e `wind_table_01` usam nomes de
-colunas diferente das demais. Vamos corrigir isso e consolidar todas as
+Notamos que as bases `wind_table_01` e `wind_table_02` usam nomes de
+colunas diferentes das demais. Vamos corrigir isso e consolidar todas as
 bases numa única tabela:
 
 ``` r
@@ -217,20 +219,21 @@ head(rain)
 ```
 
     ## # A tibble: 6 x 29
-    ##   date       location mintemp maxtemp rainfall evaporation sunshine humidity9am
-    ##   <date>     <chr>      <dbl>   <dbl>    <dbl> <lgl>       <lgl>          <dbl>
-    ## 1 2008-12-01 Albury      13.4    22.9      0.6 NA          NA                71
-    ## 2 2008-12-02 Albury       7.4    25.1      0   NA          NA                44
-    ## 3 2008-12-03 Albury      12.9    25.7      0   NA          NA                38
-    ## 4 2008-12-04 Albury       9.2    28        0   NA          NA                45
-    ## 5 2008-12-05 Albury      17.5    32.3      1   NA          NA                82
-    ## 6 2008-12-06 Albury      14.6    29.7      0.2 NA          NA                55
-    ## # ... with 21 more variables: humidity3pm <dbl>, pressure9am <dbl>, pressure3pm <dbl>,
-    ## #   cloud9am <dbl>, cloud3pm <dbl>, temp9am <dbl>, temp3pm <dbl>, raintoday <chr>,
-    ## #   amountOfRain <dbl>, raintomorrow <chr>, temp <dbl>, humidity <dbl>,
+    ##   date       location mintemp maxtemp rainfall evaporation sunshine
+    ##   <date>     <chr>      <dbl>   <dbl>    <dbl> <lgl>       <lgl>   
+    ## 1 2008-12-01 Albury      13.4    22.9      0.6 NA          NA      
+    ## 2 2008-12-02 Albury       7.4    25.1      0   NA          NA      
+    ## 3 2008-12-03 Albury      12.9    25.7      0   NA          NA      
+    ## 4 2008-12-04 Albury       9.2    28        0   NA          NA      
+    ## 5 2008-12-05 Albury      17.5    32.3      1   NA          NA      
+    ## 6 2008-12-06 Albury      14.6    29.7      0.2 NA          NA      
+    ## # ... with 22 more variables: humidity9am <dbl>, humidity3pm <dbl>,
+    ## #   pressure9am <dbl>, pressure3pm <dbl>, cloud9am <dbl>, cloud3pm <dbl>,
+    ## #   temp9am <dbl>, temp3pm <dbl>, raintoday <chr>, amountOfRain <dbl>,
+    ## #   raintomorrow <chr>, temp <dbl>, humidity <dbl>,
     ## #   precipitation3pm <dbl>, precipitation9am <dbl>, modelo_vigente <dbl>,
-    ## #   windgustdir <chr>, windgustspeed <dbl>, winddir9am <chr>, winddir3pm <chr>,
-    ## #   windspeed9am <dbl>, windspeed3pm <dbl>
+    ## #   windgustdir <chr>, windgustspeed <dbl>, winddir9am <chr>,
+    ## #   winddir3pm <chr>, windspeed9am <dbl>, windspeed3pm <dbl>
 
 A partir de agora, vamos utilizar alguns pacotes que facilitam a
 automatização da análise exploratória, conforme estratégia descrita por

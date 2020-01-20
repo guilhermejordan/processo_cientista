@@ -1,0 +1,12 @@
+name: predict_rain_australia
+title: predict_rain_australia
+username:
+account: guilhermejordan
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 1676870
+bundleId: 2740340
+url: https://guilhermejordan.shinyapps.io/predict_rain_australia/
+when: 1579488442.18171
+asMultiple: FALSE
+asStatic: FALSE

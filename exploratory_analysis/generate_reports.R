@@ -1,3 +1,5 @@
+# Generate automatic reports for exploratory analysis
+
 library(dplyr)
 library(dlookr)
 library(DataExplorer)
