@@ -23,3 +23,19 @@ rain_recipe <-
   prep()
 
 saveRDS(rain_recipe, "initial_recipe_full.RDS")
+
+
+rain <- rain %>%
+  select(
+    humidity,
+    rainfall,
+    raintoday,
+    tempmax,
+    tempmin,
+    temp9am,
+    temp3pm,
+    pressure3pm,
+    windgustspeed,
+    cloud3pm,
+    raintomorrow
+  )
