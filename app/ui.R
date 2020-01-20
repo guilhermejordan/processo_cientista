@@ -17,21 +17,29 @@ fluidPage(
                        "text/comma-separated-values,text/plain",
                        ".csv")),
 
+    numericInput(
+      "nrow",
+      "Show how many rows?",
+      value = 5,
+      min = 1,
+      max = 100,
+      step = 25
+    ),
+
     # Horizontal line ----
     tags$hr(),
 
-
-    # Input: Run model ----
-    actionButton("Run_Model", "Predict"),
-
     # Output: input data file ----
     tableOutput("dataset"),
+
+    # Input: Run model ----
+    actionButton("runModel", "Predict"),
 
     # Output: prediction ----
     tableOutput("prediction"),
 
     # Input: download button
-    downloadButton("downloadData", "Download")
+    downloadButton("downloadpred", "Download prediction")
 
   )
 

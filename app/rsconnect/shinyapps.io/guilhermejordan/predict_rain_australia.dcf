@@ -5,8 +5,8 @@ account: guilhermejordan
 server: shinyapps.io
 hostUrl: https://api.shinyapps.io/v1
 appId: 1676870
-bundleId: 2740340
+bundleId: 2740475
 url: https://guilhermejordan.shinyapps.io/predict_rain_australia/
-when: 1579488442.18171
+when: 1579494163.41369
 asMultiple: FALSE
 asStatic: FALSE
