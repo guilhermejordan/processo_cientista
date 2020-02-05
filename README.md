@@ -12,7 +12,7 @@ E executar o script `setup_environment.R`.
 
 ## Objetivo
 
-Este projeto lida com o dataset [Rain in Australia](https://www.kaggle.com/jsphyg/weather-dataset-rattle-package). O objetivo é a construção de um modelo de classificação binário para prever se vai chover ou não amanhã.
+Este projeto lida com o dataset [Rain in Australia](https://www.kaggle.com/jsphyg/weather-dataset-rattle-package), levemente modificado. O objetivo é a construção de um modelo de classificação binária para prever se vai chover ou não amanhã.
 
 ## Destaques
 
